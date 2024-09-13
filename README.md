@@ -1,4 +1,4 @@
-#Tapete de Sierpinski
+# Tapete de Sierpinski
 <h2>Que es?</h2>
 <div>
     <p>El tapete de Sierpinski es una figura geométrica fractal, creada a partir de un cuadrado, que sigue un proceso de repetición infinita similar a otros fractales como el triángulo de Sierpinski.</p>
