@@ -5,6 +5,7 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
@@ -26,7 +27,7 @@ public class TapeteDeSierpinski extends JPanel {
     }
 
     @Override
-    protected void paintComonent(Graphics g) {
+    protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         setBackground(Color.pink);
         Graphics2D g2d = (Graphics2D) g;
@@ -60,5 +61,15 @@ public class TapeteDeSierpinski extends JPanel {
         int verde = (int) (c1.getGreen() * (1 - ratio) + c2.getGreen() * ratio);
         int azul = (int) (c1.getBlue() * (1 - ratio) + c2.getGreen() * ratio);
         return new Color(rojo, verde, azul);
+    }
+
+    public static void main(String[] args) {
+        JFrame ventana = new JFrame("Tapete de Sierpinski");
+        TapeteDeSierpinski panel = new TapeteDeSierpinski();
+
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ventana.add(panel);
+        ventana.setSize(600, 600);
+        ventana.setVisible(true);
     }
 }
